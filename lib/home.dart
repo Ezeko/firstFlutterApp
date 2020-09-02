@@ -6,7 +6,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Testing Testing'),
+        title: Text('Testing Horizontal'),
       ),
 
       bottomNavigationBar: BottomAppBar(
@@ -23,6 +23,7 @@ class Home extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           textDirection: TextDirection.ltr,
           verticalDirection: VerticalDirection.down,
+          mainAxisSize: MainAxisSize.max,
           
           children: <Widget>[
             Container(

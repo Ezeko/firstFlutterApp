@@ -18,11 +18,36 @@ class Home extends StatelessWidget {
           ),
         ),
         
-        body: Container(
-          color: Colors.amber[100],
-          child: Text('This is the body'),
+        body: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          textDirection: TextDirection.ltr,
+          verticalDirection: VerticalDirection.down,
           
-        ),
+          children: <Widget>[
+            Container(
+              padding: EdgeInsets.all(10.0),
+              color: Colors.blueAccent,
+              child: Text('first child'),
+
+            ),
+            Container(
+              padding: EdgeInsets.all(10.0),
+              color: Colors.greenAccent,
+              child: Text('second child')
+            ),
+            Container(
+              padding: EdgeInsets.all(10.0),
+              color: Colors.yellowAccent,
+              child: Text('third child'),
+            ),
+            Container(
+              padding: EdgeInsets.all(10.0),
+              color: Colors.blueGrey,
+              child: Text('fourth child'),
+            ),
+          ],
+        )
     );
   }
 }

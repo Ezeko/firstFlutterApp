@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import './MyTestApp.dart';
+import './src/learnStateful.dart';
 
 void main() {
-  runApp(MyTestApp());
+  runApp(LearnStateful());
 }

@@ -31,10 +31,12 @@ class Vertical extends StatelessWidget {
                 //child: Text('Column 1')
               ),
 
-              Container(
-                padding: EdgeInsets.fromLTRB(20.0, 50.0, 20.0, 20.0),
-                color: Colors.deepOrange[50],
-                //child: Text('Column 2')
+              Expanded(
+                child: Container(
+                  padding: EdgeInsets.fromLTRB(20.0, 50.0, 20.0, 20.0),
+                  color: Colors.deepOrange[50],
+                  //child: Text('Column 2')
+                ),
               ),
 
               Container(

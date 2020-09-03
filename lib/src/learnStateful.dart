@@ -18,15 +18,29 @@ class _LearnStatefulState extends State<LearnStateful> {
           centerTitle: true,
           title: Text('Stateful Widgets Test'),
         ),
-        body: Column(
-          children: <Widget>[
-            Text('Click the box to generate a random number'),
-            clicked > 0 ? Text('$number was generated') : Text(''),
-          ],
+        body: Padding(
+          padding: const EdgeInsets.fromLTRB(38.0, 200.0, 8.0, 0.0),
+          child: Column(
+            children: <Widget>[
+              Text('Click the button to generate a random number'),
+              clicked > 0 ? Column(
+                children: [
+                  Text(
+                    '$number was generated',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic,
+                    ),
+                    ),
+                  Text('You have generated numbers $clicked times'),
+                ],
+              ) : Text(''),
+            ],
+          ),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            print('clicked');
+            //print('clicked');
             var rng = new Random();
             setState(() {
               number = rng.nextInt(100);

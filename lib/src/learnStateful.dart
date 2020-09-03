@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 class LearnStateful extends StatefulWidget {
   @override
@@ -23,6 +24,25 @@ class _LearnStatefulState extends State<LearnStateful> {
             clicked > 0 ? Text('$number was generated') : Text(''),
           ],
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            print('clicked');
+            var rng = new Random();
+            setState(() {
+              number = rng.nextInt(100);
+              clicked += 1;
+            });
+          },
+          tooltip: 'Random number generator',
+          child: Icon(Icons.directions_run),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        bottomNavigationBar: BottomAppBar(
+            shape: CircularNotchedRectangle(),
+            child: Container(
+              height: 100.0,
+            ),
+          ),
       ),
     );
   }
